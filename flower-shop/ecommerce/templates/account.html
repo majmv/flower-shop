@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+{% if user.username|stringformat:'s' == 'admin' %} 
+
+<li><a href="#"> ADMIN AUTHENTICATED - {{ user.username }} </a></li> 
+
+{% else %}
+<li><a href="#"> Hello {{ user.username }} </a></li> 
+{% endif %}
+
+<div class="btn-group-vertical" role="group" aria-label="Basic example">
+    
+    <button onclick="window.location.href='{% url "user_orders" %}';"  type="button" class="btn btn-secondary btn-info">Orders</button>
+    <button type="button" class="btn btn-secondary btn-info">Manage Account</button>
+
+
+    {% if user.username|stringformat:'s' == 'admin' %} 
+    <button onclick="window.location.href='{% url "stock" %}';" type="button" class="btn btn-secondary btn-warning"> Stocks</button>
+    <button onclick="window.location.href='{% url "order_status" %}';" type="button" class="btn btn-secondary btn-warning"> Orders Status</button>
+    {% endif %}
+
+</div>
+
+
+
+
+{% endblock %}

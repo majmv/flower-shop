@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+
+<br>
+
+
+{% for itm in items %}
+
+<div class="list-group">
+    <a href="#" class="list-group-item active">
+        <h4 class="list-group-item-heading">
+            Order id:{{   itm.0.order_id }}
+            Order price: {{   itm.0.cart.total }}
+            Order date: {{   itm.0.timestamp }}</h4>
+
+
+{% for p in  itm.1 %}
+
+<p class="list-group-item-text">--    {{ p.product }} | Quantity: {{ p.quantity }}  </p>
+
+{% endfor %}
+
+
+     
+
+    </a>
+</div>
+
+<br>
+<br>
+{% endfor %}
+
+
+
+
+
+{% endblock %}

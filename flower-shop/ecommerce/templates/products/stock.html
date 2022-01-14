@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+
+
+Trandafiri
+<div class="progress">
+ 
+    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" 
+    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: {{faina}}%">
+     {{faina|floatformat:"2"}}% Complete
+    </div>
+  </div>
+
+
+  Lalele
+  <div class="progress">
+    <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+     aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: {{oua}}%">
+     {{oua|floatformat:"2"}}% Complete
+    </div>
+  </div>
+
+  Crini
+  <div class="progress">
+    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" 
+    aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{lapte}}%">
+      {{lapte|floatformat:"2"}}% Complete 
+    </div>
+  </div>
+
+  Cosulete
+  <div class="progress">
+    <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar"
+     aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: {{ciocolata}}%">
+        {{ciocolata|floatformat:"2"}}% Complete 
+    </div>
+  </div>
+
+  Panglici
+  <div class="progress">
+    <div class="progress-bar  progress-bar-striped" role="progressbar"
+     aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: {{frisca}}%">
+        {{frisca|floatformat:"2"}}% Complete 
+    </div>
+  </div>
+
+
+
+
+{% endblock %}
